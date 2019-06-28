@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="imagenes/banco-mundial.png">
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <section id="contenedor" class="contenedor">
+        <form class="login">
+          <img src="imagenes/image.png" class="logo" alt="logo">
+          <label for="email"><span>INGRESAR SU CORREO :</span></label>
+          <input type="text" id="email">
+          <label for="pass"><span>INGRESAR SU CONTRASEÑA :</span></label>
+          <input type="password" id="pass">
+          <p id="texto1">¿Olvidaste tu contraseña?</p>
+          <input type="submit" id="boton" name="submit" value="INGRESAR">
+          <p id="texto2">¿No pudistes Ingresar? <b>Regístrate</b></p>
+        </form>
+      </section>
+      <section id="contenedor1" class="hide">
+        <div id="page1" class="hide">
+          <h1 id="viewEmail"class="hide"></h1>
+          <h2>hOLA </h2>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <!-- <script src="./data/lol/lol.js"></script> -->
     <!-- <script src="./data/pokemon/pokemon.js"></script> -->

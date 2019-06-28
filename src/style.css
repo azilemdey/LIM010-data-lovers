@@ -1,0 +1,139 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  overflow: hidden;
+  font-family: Open Sans;
+}
+.hide{
+  display: none;
+}
+.estilo{
+  font-weight:bold;
+  color: #8c230f;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+  font-family: 'Roboto',
+  sans-serif;
+  font-size: 15px;
+}
+#contenedor{
+  background-image: url(imagenes/fondo-login1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.login{
+  margin-top: 68px;
+  margin-left: 448px;
+  margin-bottom: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 400px;
+  padding: 40px;
+  background-color:#FFFFFF;
+}
+.logo{
+  width: 65%;
+  margin-top: 40px;
+}
+#texto1{
+  text-align: right;
+}
+#texto2 {
+  text-align: center;
+}
+#email,
+#pass {
+  background-color: #FFFFFF;
+  width: 100%;
+  margin-bottom: 35px;
+  height: 30px;
+  border: 0;
+  border-bottom: solid 2px #000000;
+  font-size: 15px;
+  color: #00254e;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: left;
+}
+span{
+  text-decoration: none;
+  text-align: right;
+  color: #00254e;
+  margin-bottom: 35px;
+}
+#boton{
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  background: #3897F0;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 30px;
+}
+#boton:hover {
+  background: transparent;
+  color: #3897F0;
+  border: 1px solid #3897F0;
+}
+@media (min-width: 1200px) {
+  section.contenedor .login {
+  margin-top: 68px;
+  margin-left: 448px;
+  margin-bottom: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 400px;
+  background-color:#FFFFFF;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section#contenedor {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  }
+  section.contenedor .login {
+  height: calc(100vh - 720px);
+  width: 60%;
+  margin-left: 209px;
+  margin-top: 209px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section#contenedor {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  }
+  section.contenedor .login {
+  height: calc(100vh - 454px);
+  width: 60%;
+  margin-left: 149px;
+  margin-top: 209px;
+  }
+}
+@media (max-width: 767px) {
+  section#contenedor {
+  background-image: none;
+  }
+  section.contenedor .login{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  }
+}
