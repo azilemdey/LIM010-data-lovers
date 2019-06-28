@@ -1,7 +1,7 @@
 body{
 background-image: url(fondo.png)};
 
-.form-login{
+.login {
     background-color: azure;
     display: flex;
     flex-direction: column;
@@ -10,8 +10,9 @@ background-image: url(fondo.png)};
     width: 460px;
     height: 516px;
     margin: 0 auto;
+
     }; 
 
-.img-logo{
+.img-logo {
 block-size: 100px;
 };
