@@ -59,17 +59,6 @@ selector.addEventListener('change', () =>{
       document.getElementById('page2').classList.add('hide');
       document.getElementById('contenedor1').classList.add('hide');
       document.getElementById('page1').classList.add('hide');
-    } else if (selector.selectedIndex === 4) {
-      document.getElementById('contenedor5').classList.remove('hide');
-      document.getElementById('page5').classList.remove('hide');
-      document.getElementById('contenedor4').classList.add('hide');
-      document.getElementById('page4').classList.add('hide');
-      document.getElementById('contenedor3').classList.add('hide');
-      document.getElementById('page3').classList.add('hide');
-      document.getElementById('contenedor2').classList.add('hide');
-      document.getElementById('page2').classList.add('hide');
-      document.getElementById('contenedor1').classList.add('hide');
-      document.getElementById('page1').classList.add('hide');
     }
   }
 });
