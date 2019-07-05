@@ -81,11 +81,3 @@ arrayvacio.forEach(elemt=>{
 impresion.innerHTML+=`<p <li>${elemt} <li> </p>`;
 });
 
-
-
-/* const pintarIndicadoresPorPais = (arrayvacio)=>{
-  let string =`<option disabled selected> Seleccione un indicador </option>`;
-  for(let i=0; i<arrayIndicadores.length;i++){
-    string +=`<option value="${arrayIndicadores[i]}">${arrayIndicadores[i]}</option>`
-  }
-return string; */
