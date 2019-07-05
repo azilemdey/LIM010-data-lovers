@@ -1,25 +1,26 @@
 /* Manejo del DOM */
 let i = 0;
 const button = document.getElementById('boton');
-button.addEventListener('click', () => {
+button.addEventListener('click', (event) => {
+  event.preventDefault();
   const pass = document.getElementById('pass').value;
   const userEmail = document.getElementById('email').value;
   if (pass === 'LABORATORIA') {
-    let email = document.getElementById('view-email');
-    email.innerHTML = `<i class="fa fa-user" aria-hidden="true"></i> ${userEmail}`;
+  let email = document.getElementById('view-email');
+  email.innerHTML = `<i class="fa fa-user" aria-hidden="true"></i> ${userEmail}`;
     document.getElementById('contenedor').classList.add('hide');
     document.getElementById('cabecera').classList.remove('hide');
     document.getElementById('view-email').classList.remove('hide');
     document.getElementById('contenedor1').classList.remove('hide');
     document.getElementById('page1').classList.remove('hide');
-  } else {
-    document.getElementById('texto1').classList.add('estilo');
+   } else {
+    document.getElementById('texto1').classList.add('estilo'); 
     i = i + 1;
-  } if (i < 3) {
-    document.getElementById('pass').disabled = true;
-    document.getElementById('email').disabled = true;
-    document.getElementById('boton').disabled = true;
-  }
+   } if (i < 3) {
+   document.getElementById('pass').disabled = true;
+   document.getElementById('email').disabled = true;
+   document.getElementById('boton').disabled = true;
+   }
 });
 
 
@@ -74,3 +75,17 @@ selector.addEventListener('change', () =>{
   }
 });
 
+const impresion=document.getElementById('all-indicators');
+
+arrayvacio.forEach(elemt=>{
+impresion.innerHTML+=`<p <li>${elemt} <li> </p>`;
+});
+
+
+
+/* const pintarIndicadoresPorPais = (arrayvacio)=>{
+  let string =`<option disabled selected> Seleccione un indicador </option>`;
+  for(let i=0; i<arrayIndicadores.length;i++){
+    string +=`<option value="${arrayIndicadores[i]}">${arrayIndicadores[i]}</option>`
+  }
+return string; */
