@@ -1,8 +1,11 @@
 const WORLDBANK = {
-  "PER": {
-    "indicators": [
+  "PER": 
+  {
+    "indicators": 
+    [
       {
-        "data": {
+        "data": 
+        {
           "1960": "",
           "1961": "",
           "1962": "",
