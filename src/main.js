@@ -75,7 +75,7 @@ selector.addEventListener('change', () =>{
   }
 });
 
-const cargar=()=>{
+  const cargar=()=>{
   const select=document.getElementById('arrayIndicators');
   for (let j=0; j < arrayIndicators.length; j++) {
   const option=document.createElement('option');
@@ -84,4 +84,3 @@ const cargar=()=>{
   }
 }
 cargar();
-
