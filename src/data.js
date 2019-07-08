@@ -15,6 +15,6 @@ arrayIndicators[i]=WORLDBANK.PER.indicators[i].indicatorName;}
 arrayIndicators.sort();
 console.log(arrayIndicators);
 
-let años=WORL
+
 
 
