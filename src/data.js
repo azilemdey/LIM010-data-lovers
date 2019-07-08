@@ -15,6 +15,7 @@ arrayIndicators[i]=WORLDBANK.PER.indicators[i].indicatorName;}
 arrayIndicators.sort();
 console.log(arrayIndicators);
 
-
-
-
+let yearArray=[];
+for(i=1960; i<2018; i++){
+yearArray.push(i)};
+console.log(yearArray);

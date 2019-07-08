@@ -85,6 +85,14 @@ const cargar=()=>{
 }
 cargar();
 
-
+const cargarAños=()=>{
+  const select2=document.getElementById('yearArray');
+  for (let k=0; k < yearArray.length; k++) {
+  const option2=document.createElement('option');
+  option2.innerHTML=yearArray[k];
+  select2.appendChild(option2)
+  }
+}
+cargarAños();
 
  
