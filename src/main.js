@@ -85,6 +85,3 @@ const cargar=()=>{
 }
 cargar();
 
-
-
- 
