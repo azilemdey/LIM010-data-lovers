@@ -9,10 +9,12 @@
 
 window.example = example; */
 
-let arrayvacio= new Array();
+let arrayIndicators= new Array();
 for(let i=0; i<=138;i++) {
-arrayvacio[i]=WORLDBANK.PER.indicators[i].indicatorName;}
+arrayIndicators[i]=WORLDBANK.PER.indicators[i].indicatorName;}
+arrayIndicators.sort();
+console.log(arrayIndicators);
 
-  console.log(arrayvacio);
+
 
 
