@@ -75,17 +75,16 @@ selector.addEventListener('change', () =>{
   }
 });
 
-const impresion=document.getElementById('all-indicators');
-
-arrayvacio.forEach(elemt=>{
-impresion.innerHTML+=`<p <li>${elemt} <li> </p>`;
-});
-
-
-
-/* const pintarIndicadoresPorPais = (arrayvacio)=>{
-  let string =`<option disabled selected> Seleccione un indicador </option>`;
-  for(let i=0; i<arrayIndicadores.length;i++){
-    string +=`<option value="${arrayIndicadores[i]}">${arrayIndicadores[i]}</option>`
+const cargar=()=>{
+  const select=document.getElementById('arrayIndicators');
+  for (let j=0; j < arrayIndicators.length; j++) {
+  const option=document.createElement('option');
+  option.innerHTML=arrayIndicators[j];
+  select.appendChild(option)
   }
-return string; */
+}
+cargar();
+
+
+
+ 
