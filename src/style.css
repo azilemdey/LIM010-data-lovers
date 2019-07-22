@@ -3,23 +3,28 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-body{
+
+body {
   margin: 0;
   overflow: hidden;
   font-family: Open Sans;
   width: 1440px;
   height: 1024px;
 }
-.hide{
+
+.hide {
   display: none;
 }
-.estilo{
-  font-weight:bold;
+
+.estilo {
+  font-weight: bold;
   color: #8c230f;
 }
+
 #cabecera {
   margin: 0;
 }
+
 .cabecera-menu {
   max-width: 1440px;
   width: 1440px;
@@ -29,9 +34,10 @@ body{
   margin: 0px auto;
   display: table;
 }
-#view-name{
+
+#view-name {
   position: absolute;
-  top: 6px;
+  top: 3px;
   display: table;
   left: 343px;
   transform: translate(-50%, -50%);
@@ -41,31 +47,40 @@ body{
   letter-spacing: .04rem;
   margin-top: 5.2px;
 }
-#regresar{
+
+#regresar,
+#regresar1 {
   position: absolute;
-  top: 6px;
+  top: 3px;
   display: table;
   left: 490px;
   transform: translate(-50%, -50%);
   font-size: 13px;
   color: #000;
+  border-radius: 50px;
   text-decoration: none;
   letter-spacing: .04rem;
   margin-top: 5.2px;
+  background: #e3e6eb;
+  cursor: pointer;
 }
-.avatar-logo{
+
+.avatar-logo {
   display: inline-block;
 }
-.avatar{
+
+.avatar {
   height: 70px;
   padding: 5px;
 }
-.contenedorselector{
+
+.contenedorselector {
   position: absolute;
   top: 40px;
   left: 883px;
   transform: translate(-50%, -50%);
 }
+
 label span.country {
   color: #000;
   text-decoration: none;
@@ -73,7 +88,8 @@ label span.country {
   letter-spacing: .04rem;
   margin-top: 5.2px;
 }
-#country{
+
+#country {
   margin-left: 20px;
   font-family: Open Sans;
   background: #e3e6eb;
@@ -82,25 +98,27 @@ label span.country {
   width: 100px;
   cursor: pointer;
 }
-#logo1{
+
+#logo1 {
   width: 310px;
   position: absolute;
   margin-left: 1065px;
   margin-top: 350px;
   transform: rotate(10deg);
 }
-#contenedor{
-  background: linear-gradient(90deg, #012b53, #0073a9, #00bdf7);
+
+#contenedor {
+  background: linear-gradient(90deg, #012b53, #0073a9, #014164);
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   width: 1790px;
   height: 1024px;
-  /*display: flex;*/
-  background-position-x: -350px;
-  background-position-y: 0px;
+  background-position-x: -80px;
+  background-position-y: -3px;
 }
-.login{
+
+.login {
   border-radius: 1px;
   margin-top: 254px;
   margin-left: 490px;
@@ -110,37 +128,41 @@ label span.country {
   display: -webkit-flex;
   display: -ms-flexbox;
   flex-wrap: wrap;
-  /*flex-direction: column;
-  align-items: center;
-  align-content: center;*/
   padding: 40px;
-  background-color:#F7F7F7;
+  background-color: #F7F7F7;
 }
-.logo{
+
+.logo {
   width: 349px;
   height: 74px;
   margin-left: 12px;
   background-position-x: 552px;
   background-position-y: 290px;
 }
-.registro{
+
+.registro {
   width: 349px;
   margin-left: 12px;
   margin-top: 32px;
 }
-.contenedorboton{
+
+#contenedorBoton,
+#contenedorBoton1 {
   width: 349px;
   height: 84px;
   margin-left: 12px;
 }
-#texto1{
+
+#texto1 {
   text-align: right;
   margin-bottom: 0;
 }
+
 #texto2 {
   text-align: center;
-  margin-top: 22px;
+  margin-left: 85px;
 }
+
 #name,
 #pass {
   background-color: #FFFFFF;
@@ -155,198 +177,276 @@ label span.country {
   border-bottom-right-radius: 5px;
   text-align: left;
 }
-span{
+
+span {
   text-decoration: none;
   text-align: right;
   color: #00254e;
   margin-bottom: 35px;
 }
-#boton{
-  width: 349px;
-  height: 44px;
-  font-size: 18px;
-  text-align: center;
-  border: none;
-  background: #00bdf7;
-  cursor: pointer;
-  color: #fff;
-  margin-top: 30px;
-}
-#boton:hover {
-  background: transparent;
-  color: #012b53;
-  border: 1px solid #012b53;
-}
-#contenedor1{
-  background-image: url(imagenes/fondo-page22.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 1440px;
-  height: 660px;
-  position: absolute;
-}
-#page1{
-  position: absolute;
-  left: 900px;
-  top: 280px;
-  width: 500px;
-  text-align: justify;
-  height: auto;
-  margin-left: -250px;
-  transform: translateY(-50%);
-  color: #fff;
-  padding: 30px;
-}
-#contenedor2-Peru{
-  background-image: url(imagenes/fondo-page3.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 1440px;
-  height: 660px;
-  position: absolute;
-}
-.bloque1{
-  position: absolute;
-  top: 305px;
-  right: 60px;
-  width: 440px;
-  height: auto;
-  margin-right: 110px;
-  transform: translateY(-50%);
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-.bloque1 h3{
-  margin: 0;
-  color: #fff;
-  text-align: center;
-  font-size: 25px;
-  font-family: cursive;
-  text-transform: uppercase;
-  display: none;
-}
-.bloque1 input[type=submit]{
+
+#boton {
   width: 349px;
   height: 44px;
   font-size: 18px;
   text-align: center;
   border: none;
   background: #0073a9;
+  margin-left: 14px;
   cursor: pointer;
   color: #fff;
   margin-top: 30px;
-  margin-left: 20px;
 }
+
+#boton:hover {
+  background: transparent;
+  color: #0073a9;
+  border: 1px solid #d8d9da;
+}
+
+#contenedor1 {
+  background-image: url(imagenes/fondo-1.png);
+  background-size: cover;
+  opacity: .9;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 660px;
+  position: absolute;
+}
+
+#page1 {
+  position: absolute;
+  left: 900px;
+  top: 280px;
+  width: 500px;
+  text-align: justify;
+  font-size: 20px;
+  height: auto;
+  margin-left: -250px;
+  transform: translateY(-50%);
+  z-index: 999;
+  color: #fff;
+  padding: 30px;
+}
+
+#mostraryear {
+  background-image: url(imagenes/fondo-2.png);
+  background-size: cover;
+  opacity: .9;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 1440px;
+  height: 660px;
+  }
+
+#mostraryear1 {
+  background-image: url(imagenes/fondo-5.png);
+  background-size: cover;
+  opacity: .9;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 1440px;
+  height: 660px;
+ 
+}
+
+#mostraryear tr,
+#mostraryear tr td {
+  border: 1px solid #333333;
+  color: #333333;
+  font-weight: bold;
+  padding: 15px;
+}
+
+#container-info {
+  position: absolute;
+  top: 15px;
+  right: 1338px;
+  width: 70px;
+  height: 510px;
+  background-color: rgba(252, 249, 249, 0.764);
+}
+
+#show-title {
+  transform: rotate(180deg);
+  position: absolute;
+  width: 48px;
+  right: 2px;
+  top: 0px;
+  text-align: center;
+  writing-mode: vertical-rl;
+}
+
+#container-year {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  position: absolute;
+  top: 15px;
+  right: 868px;
+  width: 450px;
+  padding-left: 20px;
+  overflow: scroll;
+  height: 510px;
+  background-color: rgba(252, 249, 249, 0.764);
+}
+
+#container-year1 {
+  position: absolute;
+  top: 15px;
+  left: 608px;
+  width: 650px;
+  padding-left: 62px;
+  overflow: scroll;
+  height: 510px;
+  background-color: rgba(252, 249, 249, 0.764);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtro1-2 {
+  margin-right: 70px;
+  margin-top: 15px;
+}
+
+#filtrar-poranio {
+  position: absolute;
+  width: 173px;
+  padding: 5px;
+}
+
+#filtrar-porrango {
+  position: absolute;
+  width: 206px;
+  padding: 5px;
+}
+
+#desde,
+#hasta {
+  width: 50px;
+}
+
+#datayear {
+  color: #000;
+}
+
+#boton-asc,
+#boton-desc {
+  width: 100px;
+}
+
+#texto-porrango {
+  font-size: 12px;
+  color: red;
+  margin-top: 32px;
+}
+
+#contenedor2-peru {
+  background-image: url(imagenes/fondo-2.png);
+  opacity: .9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 1440px;
+  height: 660px;
+  position: absolute;
+}
+
+.bloque1 {
+  position: absolute;
+  top: 268px;
+  right: 155px;
+  width: 390px;
+  height: auto;
+  transform: translateY(-50%);
+  border: 2px solid #eee;
+}
+
+.bloque1 h3 {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-size: 25px;
+  font-family: cursive;
+  text-transform: uppercase;
+  display: none;
+}
+
+.bloque1 input[type=submit] {
+  width: 349px;
+  height: 35px;
+  font-size: 18px;
+  text-align: center;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid #eee;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
 input[type=submit]:hover {
   background: transparent;
   color: #fff;
-  border: 1px solid #012b53;
+  border-bottom: 1px solid #012b53;
 }
-#bloqueProteccion-Peru {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-#bloqueSalud-Peru {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-#bloqueGenero-Peru {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-#respuestaGenero-Peru {
+
+#respuestagenero-peru,
+#respuestadesarrollo-peru,
+#respuestaeducacion-peru,
+#respuestasector-peru,
+#respuestagenero-mexico,
+#respuestadesarrollo-mexico,
+#respuestaeducacion-mexico,
+#respuestasector-mexico,
+#respuestagenero-chile,
+#respuestadesarrollo-chile,
+#respuestaeducacion-chile,
+#respuestasector-chile,
+#respuestagenero-brazil,
+#respuestadesarrollo-brazil,
+#respuestaeducacion-brazil,
+#respuestasector-brazil {
   overflow-y: scroll;
-  height: 440px;
+  height: 360px;
 }
-#respuestaEducacion-Peru {
-  overflow-y: scroll;
-  height: 440px;
-}
+
 ::-webkit-scrollbar {
   width: 1rem;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #eee;
 }
+
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  background: rgba(0.1, 0.1, 0.1, 0.5);
+  background: rgba(0, 36, 78, 0.897);
 }
-#bloqueSector-Peru {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-#bloqueEducacion-Peru {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-#bloqueDesarrollo-Peru {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-#bloqueEficacia-Peru {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-h3{
+
+h3 {
   text-align: center;
   font-size: 25px;
 }
-a{
+
+a {
   cursor: pointer;
-  color: #fff;
+  color: #333333;
   text-decoration: none;
 }
-#indicador1,#indicador2{
-  color: #fff;
+
+#indicador1,
+#indicador2 {
+  color: #000;
 }
-#contenedor3-Mexico {
-  background-image: url(imagenes/fondo-page5.png);
+
+#contenedor3-mexico {
+  background-image: url(imagenes/fondo-5.png);
+  opacity: .9;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -354,108 +454,10 @@ a{
   height: 660px;
   position: absolute;
 }
-#bloqueProteccion-Mexico {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
 
-#bloqueSalud-Mexico {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueGenero-Mexico {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#respuestaGenero-Mexico {
-  overflow-y: scroll;
-  height: 440px;
-}
-
-#respuestaEducacion-Mexico {
-  overflow-y: scroll;
-  height: 440px;
-}
-
-::-webkit-scrollbar {
-  width: 1rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #eee;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: rgba(0.1, 0.1, 0.1, 0.5);
-}
-
-#bloqueSector-Mexico {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueEducacion-Mexico {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueDesarrollo-Mexico {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueEficacia-Mexico {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-#contenedor4-Chile {
-  background-image: url(imagenes/fondo-page6.png);
+#contenedor4-chile {
+  background-image: url(imagenes/fondo-3.png);
+  opacity: .9;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -463,108 +465,29 @@ a{
   height: 660px;
   position: absolute;
 }
-#bloqueProteccion-Chile {
+
+.columna{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.bloquessectores {
   position: absolute;
   left: 40px;
-  top: 92px;
+  top: 82px;
   width: 770px;
   height: auto;
   font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
+  background-color: rgba(252, 249, 249, 0.764);
+  border: 2px solid #eee;
   padding: 30px;
 }
 
-#bloqueSalud-Chile {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
 
-#bloqueGenero-Chile {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#respuestaGenero-Chile {
-  overflow-y: scroll;
-  height: 440px;
-}
-
-#respuestaEducacion-Chile {
-  overflow-y: scroll;
-  height: 440px;
-}
-
-::-webkit-scrollbar {
-  width: 1rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #eee;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: rgba(0.1, 0.1, 0.1, 0.5);
-}
-
-#bloqueSector-Chile {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueEducacion-Chile {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueDesarrollo-Chile {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueEficacia-Chile {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-#contenedor5-Brazil {
-  background-image: url(imagenes/fondo-page4.png);
+#contenedor5-brazil {
+  background-image: url(imagenes/fondo-4.png);
+  opacity: .9;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -572,195 +495,463 @@ a{
   height: 660px;
   position: absolute;
 }
-#bloqueProteccion-Brazil {
+
+footer {
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  width: 1320px;
   position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
+  margin-top: 589px;
 }
 
-#bloqueSalud-Brazil {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
+#developer {
+  margin-top: -25px;
+  margin-left: 30px;
 }
 
-#bloqueGenero-Brazil {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#respuestaGenero-Brazil {
-  overflow-y: scroll;
-  height: 440px;
-}
-
-#respuestaEducacion-Brazil {
-  overflow-y: scroll;
-  height: 440px;
-}
-
-::-webkit-scrollbar {
-  width: 1rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #eee;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: rgba(0.1, 0.1, 0.1, 0.5);
-}
-
-#bloqueSector-Brazil {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueEducacion-Brazil {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueDesarrollo-Brazil {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
-
-#bloqueEficacia-Brazil {
-  position: absolute;
-  left: 40px;
-  top: 92px;
-  width: 770px;
-  height: auto;
-  font-size: 20px;
-  background-color: rgba(0.1, 0.1, 0.1, 0.7);
-  padding: 30px;
-}
 @media (min-width: 1200px) {
   section.contenedor .login {
-  margin-top: 82px;
-  margin-left: 430px;
-  position: absolute;
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  flex-wrap: wrap;
-  align-items: inherit;
-  align-content: flex-start;
-  width: 460px;
-  height: 516px;
-  background-color: #F7F7F7;
+    margin-top: 82px;
+    margin-left: 430px;
+    position: absolute;
+    flex-wrap: wrap;
+    align-items: inherit;
+    align-content: flex-start;
+    width: 460px;
+    height: 516px;
+    background-color: #F7F7F7;
+  }
+
+  #contiene-boton {
+    margin-left: 310px;
+  }
+
+  #contiene-boton1 {
+    margin-left: 310px;
+    margin-top: 20px;
+  }
+
+  #contenedor1 {
+    background-image: url(imagenes/fondo-1.png);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1440px;
+    height: 582px;
+    position: absolute;
+  }
+
+  #mostraryear {
+    background-image: url(imagenes/fondo-nuevo.jpg);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1440px;
+    height: 582px;
+    position: absolute;
+  }
+
+  #contenedor2-Peru {
+    background-image: url(imagenes/fondo-2.png);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1440px;
+    height: 582px;
+    position: absolute;
+  }
+
+  #contenedor3-mexico {
+    background-image: url(imagenes/fondo-5.png);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1440px;
+    height: 582px;
+    position: absolute;
+  }
+
+  #contenedor4-chile {
+    background-image: url(imagenes/fondo-3.png);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1440px;
+    height: 582px;
+    position: absolute;
+  }
+
+  #contenedor5-brazil {
+    background-image: url(imagenes/fondo-4.png);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1440px;
+    height: 582px;
+    position: absolute;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
-  section#contenedor {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  width: 1282px;
-  height: 1714px;
-  position: absolute;
-  /*display: flex;*/
-  }
-  section.contenedor .login {
-  height: 524px;
-  width: 478px;
-  margin-top: 420px;
-  margin-left: 296px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  section#contenedor {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  width: 1032px;
-  height: 1374px;
-  position: absolute;
-  /*display: flex;*/
-  }
-  section.contenedor .login {
-  height: 534px;
-  width: 458px;
-  margin-top: 390px;
-  margin-left: 296px;
-  flex-direction: column;
-  display: flex;
-  align-items: flex-start;
-  align-content: center;
-  }
-}
+
 @media (max-width: 767px) {
   section#contenedor {
-  background-image: none;
-  width: 767px;/*379px;*/
-  height: 767px;
-  position: absolute;
-  /*display: flex;*/
+    background-image: none;
+    width: 767px;
+    height: 767px;
+    position: absolute;
   }
-  section.contenedor .login{
-  width: 767px;/*419px;*/
-  height: 823px;/*738px;*/
-  margin-left: 1px;
-  margin-top: 1px;
-  display: flex;
-  flex-direction: column;
+
+  section.contenedor .login {
+    width: 767px;
+    height: 823px;
+    margin-left: calc(-49px);
+    margin-top: 1px;
+    display: flex;
+    flex-direction: column;
   }
+
   section.contenedor .login .logo {
-  width: 269px;
-  height: 60px;
-  margin-left: 23px;
-  margin-top: 40px;
+    width: 350px;
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 0px;
   }
-  section.contenedor .login .registro{
-  width: 280px;
-  height: 210px;
-  margin-left: 20px;
-  margin-top: 55px;
+
+  section.contenedor .login .registro {
+    width: 341px;
+    height: 210px;
+    margin-left: 20px;
   }
-   section.contenedor .login .contenedorboton{
-  width: 278px;
-  height: 86px;
-  margin-left: 20px;
-  margin-top: 35px;
-   }
+
+  #name,
+  #pass {
+    background-color: #FFFFFF;
+    width: 319px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    border: 0;
+    border-bottom: solid 2px #000000;
+    font-size: 15px;
+    color: #00254e;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: left;
+  }
+
+  span {
+    text-decoration: none;
+    text-align: right;
+    color: #00254e;
+    margin-bottom: 35px;
+    margin-left: 12px;
+  }
+
+  #texto1 {
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: 11px;
+  }
+
+  section.contenedor .login #texto2 {
+    text-align: center;
+    margin-top: 22px;
+    margin-right: 394px;
+  }
+
+  section.contenedor .login .contenedorboton {
+    width: 341px;
+    height: 86px;
+    margin-left: 16px;
+    margin-top: 35px;
+  }
+
+  .contenedorboton #boton {
+    width: 319px;
+    height: 44px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    background: #0073a9;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 30px;
+  }
+
+  section#contenedor1 {
+    background-image: none;
+    width: 767px;
+    height: 767px;
+    position: absolute;
+  }
+
+  header #cabecera {
+    height: 170px;
+  }
+
+  .cabecera-menu .avatar {
+    height: 90px;
+    width: 367px;
+    background: #c4c4c4;
+  }
+
+  #view-name {
+    position: absolute;
+    top: 66px;
+    display: table;
+    left: 343px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: .04rem;
+    margin-top: 5.2px;
+  }
+
+  .cabecera-menu .contenedorselector {
+    position: absolute;
+    top: 100px;
+    left: 33px;
+  }
+
+  #regresar,
+  #regresar1 {
+    position: absolute;
+    top: 66px;
+    display: table;
+    left: 490px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    color: #000;
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: .04rem;
+    margin-top: 5.2px;
+    background: #e3e6eb;
+    cursor: pointer;
+  }
+
+  #country {
+    display: flex;
+    margin-left: 440px;
+    margin-top: calc(-50px);
+    font-family: Open Sans;
+    background: #e3e6eb;
+    border-radius: 50px;
+    letter-spacing: .04rem;
+    width: 100px;
+    cursor: pointer;
+  }
+
+  #selector {
+    display: flex;
+    margin-left: 290px;
+    margin-top: 80px;
+  }
+
+  #contenedor1 #page1 {
+    position: absolute;
+    left: 251px;
+    top: 244px;
+    font-size: 20px;
+    width: 367px;
+    height: 497px;
+    color: black;
+    background: #c4c4c4;
+    padding: 30px;
+  }
+
+  .bloque1 {
+    position: absolute;
+    top: 276px;
+    right: 1095px;
+    width: 330px;
+    height: auto;
+    transform: translateY(-50%);
+  }
+
+  .bloque1 input[type=submit] {
+    width: 289px;
+    height: 35px;
+    font-size: 18px;
+    text-align: center;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid #eee;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  #contenedor2-peru {
+    background-image: url(imagenes/fondo-nuevo.jpg);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 1110px;
+    position: absolute;
+  }
+
+  #bloqueproteccion-peru,
+  #bloquesalud-peru,
+  #bloquegenero-peru,
+  #bloquesector-peru,
+  #bloqueeducacion-peru,
+  #bloquedesarrollo-peru,
+  #bloquesectorpublico-peru,
+  #bloqueeficacia-peru {
+    position: absolute;
+    left: 0px;
+    top: 712px;
+    width: 360px;
+    height: 570px;
+    color: #000;
+    border: 2px solid #eee;
+    padding: 9px;
+  }
+
+  #contenedor3-mexico {
+    background-image: url(imagenes/fondo-nuevo.jpg);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 1110px;
+    position: absolute;
+  }
+
+  #bloqueproteccion-mexico,
+  #bloquesalud-mexico,
+  #bloquegenero-mexico,
+  #bloquesector-mexico,
+  #bloqueeducacion-mexico,
+  #bloquedesarrollo-mexico,
+  #bloquesectorpublico-mexico,
+  #bloqueeficacia-mexico {
+    position: absolute;
+    left: 0px;
+    top: 712px;
+    width: 360px;
+    height: 570px;
+    color: #000;
+    border: 2px solid #eee;
+    padding: 9px;
+  }
+
+  #contenedor4-chile {
+    background-image: url(imagenes/fondo-nuevo.jpg);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 1110px;
+    position: absolute;
+  }
+
+  #bloqueproteccion-chile,
+  #bloquesalud-chile,
+  #bloquegenero-chile,
+  #bloquesector-chile,
+  #bloqueeducacion-chile,
+  #bloquedesarrollo-chile,
+  #bloquesectorpublico-chile,
+  #bloqueeficacia-chile {
+    position: absolute;
+    left: 0px;
+    top: 712px;
+    width: 360px;
+    height: 570px;
+    color: #000;
+    border: 2px solid #eee;
+    padding: 9px;
+  }
+
+  #contenedor5-brazil {
+    background-image: url(imagenes/fondo-nuevo.jpg);
+    opacity: .9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 1110px;
+    position: absolute;
+  }
+
+  #bloqueproteccion-brazil,
+  #bloquesalud-brazil,
+  #bloquegenero-brazil,
+  #bloquesector-brazil,
+  #bloqueeducacion-brazil,
+  #bloquedesarrollo-brazil,
+  #bloquesectorpublico-brazil,
+  #bloqueeficacia-brazil {
+    position: absolute;
+    left: 0px;
+    top: 712px;
+    width: 360px;
+    height: 570px;
+    color: #000;
+    border: 2px solid #eee;
+    padding: 9px;
+  }
+
+  /* #container-year {
+    display: flex;
+    align-items: flex-start; 
+    position: absolute;
+    top: 15px;
+    right: 908px;
+    width: 340px;
+    overflow: scroll;
+    padding-left: 20px;
+    height: 550px;
+    background-color: rgba(252, 249, 249, 0.764);
+  }*/
+
+  #container-year1 {
+    position: absolute;
+    top: 575px;
+    left: 10px;
+    width: 340px;
+    height: 550px;
+    padding-left: unset;
+    background-color: rgba(252, 249, 249, 0.764);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #mostraryear {
+    background-image: url(imagenes/fondo-2.png);
+    background-size: cover;
+    opacity: .9;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1440px;
+    height: 1130px;
+    position: absolute;
+  }
+
+  footer {
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    width: 1320px;
+    position: absolute;
+    margin-top: 589px;
+  }
+
+  #developer {
+    margin-top: calc(-55px);
+    margin-left: 30px;
+  }
 }
+

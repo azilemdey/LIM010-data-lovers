@@ -12,21 +12,24 @@
 </head>
 
 <body>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <header>
+    <!---->
     <section id="cabecera" class="hide">
       <nav class="cabecera-menu">
-        <a href="#" class="avatar-logo"><img src="imagenes/image.png" class="avatar"></a>
+        <a href="#" class="avatar-logo"><img src="imagenes/image.png" class="avatar" alt="avatar"></a>
         <div class="contenedorselector">
-          <label for="country"><span class="country">Seleccione el país:</span></label>
+          <label for="country" id="selector"><span class="country">Seleccione el país:</span></label>
           <select name="country" id="country">
-            <option value="" disabled selected>Países:</option>
-            <option value="1">Perú</option>
-            <option value="2">México</option>
-            <option value="3">Chile</option>
-            <option value="4">Brazil</option>
+                     
           </select>
           <h1 id="view-name" class="hide"></h1>
-          <button id="regresar">🚪</button>
+          <div id="contiene-boton" class="hide">
+            <button id="regresar">⬅BackHome</button>
+          </div>
+          <div id="contiene-boton1" class="hide">
+            <button id="regresar1">⬅Atrás</button>
+          </div>
         </div>
       </nav>
     </section>
@@ -45,217 +48,251 @@
         </div>
         <div class="contenedorboton">
           <input type="submit" id="boton" name="submit" value="INGRESAR">
-          <p id="texto2">¿No pudistes Ingresar? <b>Regístrate</b></p>
         </div>
+        <p id="texto2">No pudiste ingresar?<b>Regístrate</b></p>
       </form>
     </section>
     <section id="contenedor1" class="hide">
       <div id="page1" class="hide">
         <h2>Quienes Somos </h2>
         <p>Conformado por 189 países miembros; con personal de más de 170 países, y oficinas en más de 130 lugares,
-          el Grupo Banco
-          Mundial es una asociación mundial única: las cinco instituciones que lo integran trabajan para reducir la
-          pobreza y
-          generar prosperidad compartida en los países en desarrollo.</p>
+          el Grupo Banco Mundial es una asociación mundial única: las cinco instituciones que lo integran trabajan para
+          reducir la
+          pobreza y generar prosperidad compartida en los países en desarrollo.</p>
       </div>
     </section>
-    <section id="contenedor2-Peru" class="hide">
+
+    <!-- Mostrar Valores -->
+    <section class="hide" id="mostraryear">
+      <div id="container-info">
+        <p id="show-title"></p>
+      </div>
+      <div id="container-year">
+        <table id="datayear">
+          <tr>
+            <td>Año</td>
+            <td>Valor</td>
+          </tr>
+        </table>
+        <div class="columna">
+        <input type="submit" id="boton-asc" name="submit" value="↑ Ascendente">
+        <input type="submit" id="boton-desc" name="submit" value="↓ Descendente">
+      </div>
+      </div>
+      <div id="container-year1">
+        <div id="filtro1" >
+          <label for="year" id="selector-year"><span class="year">Seleccione el año:</span></label>
+          <select name="year" id="filtroyear">
+            <option>Por Año</option>
+          </select>
+          </div>
+        <div id="filtro2">
+          <label for="desde"><span>Desde :</span></label>
+          <input type="text" id="desde">
+          <label for="hasta"><span>Hasta :</span></label>
+          <input type="text" id="hasta">
+          <p id="texto-porrango"></p>
+        </div>
+      </div>
+    </section>
+
+    <!---->
+
+    <section id="contenedor2-peru" class="hide">
       <div id="page2" class="hide">
         <div class="bloque1">
           <h3>Perú</h3>
-           <select id="arrayIndicators"> </select>
-           <select id="yearArray"></select>
-
-          <!--<input type="submit" value="Protección social y desarrollo" id="proteccion">
-          <input type="submit" value="Salud" id="salud">
-          <input type="submit" value="Género" id="genero">
-          <input type="submit" value="Sector Privado" id="sector">
-          <input type="submit" value="Educación" id="educacion">
-          <input type="submit" value="Desarrollo Social" id="desarrollo">
-        </div>-->
-        <div class="bloque2">
-          <table>
-            <thead>
-              <tr>
-                <th id="indicador1">Indicador</th>
-                <th id="indicador2">Año</th>
-              </tr>
-            </thead>
-            <tbody id="respuesta">
-            </tbody>
-          </table>
-          <input type="submit" value="Protección social y desarrollo" id="proteccion-Peru">
-          <input type="submit" value="Salud" id="salud-Peru">
-          <input type="submit" value="Género" id="genero-Peru">
-          <input type="submit" value="Sector Privado" id="sector-Peru">
-          <input type="submit" value="Educación" id="educacion-Peru">
-          <input type="submit" value="Desarrollo Social" id="desarrollo-Peru">
-          <input type="submit" value="Eficacia de la Ayuda" id="eficacia-Peru">
+          <input type="submit" value="Protección social y desarrollo" id="proteccion-peru">
+          <input type="submit" value="Salud" id="salud-peru">
+          <input type="submit" value="Género" id="genero-peru">
+          <input type="submit" value="Sector Privado" id="sector-peru">
+          <input type="submit" value="Educación" id="educacion-peru">
+          <input type="submit" value="Desarrollo Social" id="desarrollo-peru">
+          <input type="submit" value="Sector Público" id="sectorpublico-peru">
+          <input type="submit" value="Eficacia de la Ayuda" id="eficacia-peru">
         </div>
       </div>
     </section>
-    <section id="bloqueProteccion-Peru" class="hide">
+    <section id="bloqueproteccion-peru" class="hide bloquessectores">
       <h3><a href="#">Protección Social y Desarrollo</a></h3>
-      <ul id="respuestaProteccion-Peru"></ul>
+      <ul id="respuestaproteccion-peru"></ul>
     </section>
-    <section id="bloqueSalud-Peru" class="hide">
+    <section id="bloquesalud-peru" class="hide bloquessectores">
       <h3><a href="#">Salud</a></h3>
-      <ul id="respuestaSalud-Peru"></ul>
+      <ul id="respuestasalud-peru"></ul>
     </section>
-    <section id="bloqueGenero-Peru" class="hide">
+    <section id="bloquegenero-peru" class="hide bloquessectores">
       <h3><a href="#">Género</a></h3>
-      <ul id="respuestaGenero-Peru"></ul>
+      <ul id="respuestagenero-peru"></ul>
     </section>
-    <section id="bloqueSector-Peru" class="hide">
+    <section id="bloquesector-peru" class="hide bloquessectores">
       <h3><a href="#">Sector Privado</a></h3>
-      <ul id="respuestaSector-Peru"></ul>
+      <ul id="respuestasector-peru"></ul>
     </section>
-    <section id="bloqueEducacion-Peru" class="hide">
+    <section id="bloqueeducacion-peru" class="hide bloquessectores">
       <h3><a href="#">Educación</a></h3>
-      <ul id="respuestaEducacion-Peru"></ul>
+      <ul id="respuestaeducacion-peru"></ul>
     </section>
-    <section id="bloqueDesarrollo-Peru" class="hide">
+    <section id="bloquedesarrollo-peru" class="hide bloquessectores">
       <h3><a href="#">Desarrollo Social</a></h3>
-      <ul id="respuestaDesarrollo-Peru"></ul>
+      <ul id="respuestadesarrollo-peru"></ul>
     </section>
-    <section id="bloqueEficacia-Peru" class="hide">
+    <section id="bloquesectorpublico-peru" class="hide bloquessectores">
+      <h3><a href="#">Sector Público</a></h3>
+      <ul id="respuestasectorpublico-peru"></ul>
+    </section>
+    <section id="bloqueeficacia-peru" class="hide bloquessectores">
       <h3><a href="#">Eficacia de la Ayuda</a></h3>
-      <ul id="respuestaEficacia-Peru"></ul>
+      <ul id="respuestaeficacia-peru"></ul>
     </section>
-    <section id="contenedor3-Mexico" class="hide">
+    <section id="contenedor3-mexico" class="hide">
       <div id="page3" class="hide">
         <div class="bloque1">
           <h3>México</h3>
-          <input type="submit" value="Protección social y desarrollo" id="proteccion-Mexico">
-          <input type="submit" value="Salud" id="salud-Mexico">
-          <input type="submit" value="Género" id="genero-Mexico">
-          <input type="submit" value="Sector Privado" id="sector-Mexico">
-          <input type="submit" value="Educación" id="educacion-Mexico">
-          <input type="submit" value="Desarrollo Social" id="desarrollo-Mexico">
-          <input type="submit" value="Eficacia de la Ayuda" id="eficacia-Mexico">
+          <input type="submit" value="Protección social y desarrollo" id="proteccion-mexico">
+          <input type="submit" value="Salud" id="salud-mexico">
+          <input type="submit" value="Género" id="genero-mexico">
+          <input type="submit" value="Sector Privado" id="sector-mexico">
+          <input type="submit" value="Educación" id="educacion-mexico">
+          <input type="submit" value="Desarrollo Social" id="desarrollo-mexico">
+          <input type="submit" value="Sector Público" id="sectorpublico-mexico">
+          <input type="submit" value="Eficacia de la Ayuda" id="eficacia-mexico">
         </div>
       </div>
     </section>
-    <section id="bloqueProteccion-Mexico" class="hide">
+    <section id="bloqueproteccion-mexico" class="hide bloquessectores">
       <h3><a href="#">Protección Social y Desarrollo</a></h3>
-      <ul id="respuestaProteccion-Mexico"></ul>
+      <ul id="respuestaproteccion-mexico"></ul>
     </section>
-    <section id="bloqueSalud-Mexico" class="hide">
+    <section id="bloquesalud-mexico" class="hide bloquessectores">
       <h3><a href="#">Salud</a></h3>
-      <ul id="respuestaSalud-Mexico"></ul>
+      <ul id="respuestasalud-mexico"></ul>
     </section>
-    <section id="bloqueGenero-Mexico" class="hide">
+    <section id="bloquegenero-mexico" class="hide bloquessectores">
       <h3><a href="#">Género</a></h3>
-      <ul id="respuestaGenero-Mexico"></ul>
+      <ul id="respuestagenero-mexico"></ul>
     </section>
-    <section id="bloqueSector-Mexico" class="hide">
+    <section id="bloquesector-mexico" class="hide bloquessectores">
       <h3><a href="#">Sector Privado</a></h3>
-      <ul id="respuestaSector-Mexico"></ul>
+      <ul id="respuestasector-mexico"></ul>
     </section>
-    <section id="bloqueEducacion-Mexico" class="hide">
+    <section id="bloqueeducacion-mexico" class="hide bloquessectores">
       <h3><a href="#">Educación</a></h3>
-      <ul id="respuestaEducacion-Mexico"></ul>
+      <ul id="respuestaeducacion-mexico"></ul>
     </section>
-    <section id="bloqueDesarrollo-Mexico" class="hide">
+    <section id="bloquedesarrollo-mexico" class="hide bloquessectores">
       <h3><a href="#">Desarrollo Social</a></h3>
-      <ul id="respuestaDesarrollo-Mexico"></ul>
+      <ul id="respuestadesarrollo-mexico"></ul>
     </section>
-    <section id="bloqueEficacia-Mexico" class="hide">
+    <section id="bloquesectorpublico-mexico" class="hide bloquessectores">
+      <h3><a href="#">Sector Público</a></h3>
+      <ul id="respuestasectorpublico-mexico"></ul>
+    </section>
+    <section id="bloqueeficacia-mexico" class="hide bloquessectores">
       <h3><a href="#">Eficacia de la Ayuda</a></h3>
-      <ul id="respuestaEficacia-Mexico"></ul>
+      <ul id="respuestaeficacia-mexico"></ul>
     </section>
-    <section id="contenedor4-Chile" class="hide">
+    <section id="contenedor4-chile" class="hide">
       <div id="page4" class="hide">
         <div class="bloque1">
           <h3>Chile</h3>
-          <input type="submit" value="Protección social y desarrollo" id="proteccion-Chile">
-          <input type="submit" value="Salud" id="salud-Chile">
-          <input type="submit" value="Género" id="genero-Chile">
-          <input type="submit" value="Sector Privado" id="sector-Chile">
-          <input type="submit" value="Educación" id="educacion-Chile">
-          <input type="submit" value="Desarrollo Social" id="desarrollo-Chile">
-          <input type="submit" value="Eficacia de la Ayuda" id="eficacia-Chile">
+          <input type="submit" value="Protección social y desarrollo" id="proteccion-chile">
+          <input type="submit" value="Salud" id="salud-chile">
+          <input type="submit" value="Género" id="genero-chile">
+          <input type="submit" value="Sector Privado" id="sector-chile">
+          <input type="submit" value="Educación" id="educacion-chile">
+          <input type="submit" value="Desarrollo Social" id="desarrollo-chile">
+          <input type="submit" value="Sector Público" id="sectorpublico-chile">
+          <input type="submit" value="Eficacia de la Ayuda" id="eficacia-chile">
         </div>
       </div>
     </section>
-    <section id="bloqueProteccion-Chile" class="hide">
+    <section id="bloqueproteccion-chile" class="hide bloquessectores">
       <h3><a href="#">Protección Social y Desarrollo</a></h3>
-      <ul id="respuestaProteccion-Chile"></ul>
+      <ul id="respuestaproteccion-chile"></ul>
     </section>
-    <section id="bloqueSalud-Chile" class="hide">
+    <section id="bloquesalud-chile" class="hide bloquessectores">
       <h3><a href="#">Salud</a></h3>
-      <ul id="respuestaSalud-Chile"></ul>
+      <ul id="respuestasalud-chile"></ul>
     </section>
-    <section id="bloqueGenero-Chile" class="hide">
+    <section id="bloquegenero-chile" class="hide bloquessectores">
       <h3><a href="#">Género</a></h3>
-      <ul id="respuestaGenero-Chile"></ul>
+      <ul id="respuestagenero-chile"></ul>
     </section>
-    <section id="bloqueSector-Chile" class="hide">
+    <section id="bloquesector-chile" class="hide bloquessectores">
       <h3><a href="#">Sector Privado</a></h3>
-      <ul id="respuestaSector-Chile"></ul>
+      <ul id="respuestasector-chile"></ul>
     </section>
-    <section id="bloqueEducacion-Chile" class="hide">
+    <section id="bloqueeducacion-chile" class="hide bloquessectores">
       <h3><a href="#">Educación</a></h3>
-      <ul id="respuestaEducacion-Chile"></ul>
+      <ul id="respuestaeducacion-chile"></ul>
     </section>
-    <section id="bloqueDesarrollo-Chile" class="hide">
+    <section id="bloquedesarrollo-chile" class="hide bloquessectores">
       <h3><a href="#">Desarrollo Social</a></h3>
-      <ul id="respuestaDesarrollo-Chile"></ul>
+      <ul id="respuestadesarrollo-chile"></ul>
     </section>
-    <section id="bloqueEficacia-Chile" class="hide">
+    <section id="bloquesectorpublico-chile" class="hide bloquessectores">
+      <h3><a href="#">Sector Público</a></h3>
+      <ul id="respuestasectorpublico-chile"></ul>
+    </section>
+    <section id="bloqueeficacia-chile" class="hide bloquessectores">
       <h3><a href="#">Eficacia de la Ayuda</a></h3>
-      <ul id="respuestaEficacia-Chile"></ul>
+      <ul id="respuestaeficacia-chile"></ul>
     </section>
-    <section id="contenedor5-Brazil" class="hide">
+    <section id="contenedor5-brazil" class="hide">
       <div id="page5" class="hide">
         <div class="bloque1">
           <h3>Brazil</h3>
-          <input type="submit" value="Protección social y desarrollo" id="proteccion-Brazil">
-          <input type="submit" value="Salud" id="salud-Brazil">
-          <input type="submit" value="Género" id="genero-Brazil">
-          <input type="submit" value="Sector Privado" id="sector-Brazil">
-          <input type="submit" value="Educación" id="educacion-Brazil">
-          <input type="submit" value="Desarrollo Social" id="desarrollo-Brazil">
-          <input type="submit" value="Eficacia de la Ayuda" id="eficacia-Brazil">
+          <input type="submit" value="Protección social y desarrollo" id="proteccion-brazil">
+          <input type="submit" value="Salud" id="salud-brazil">
+          <input type="submit" value="Género" id="genero-brazil">
+          <input type="submit" value="Sector Privado" id="sector-brazil">
+          <input type="submit" value="Educación" id="educacion-brazil">
+          <input type="submit" value="Desarrollo Social" id="desarrollo-brazil">
+          <input type="submit" value="Sector Público" id="sectorpublico-brazil">
+          <input type="submit" value="Eficacia de la Ayuda" id="eficacia-brazil">
         </div>
       </div>
     </section>
-    <section id="bloqueProteccion-Brazil" class="hide">
+    <section id="bloqueproteccion-brazil" class="hide bloquessectores">
       <h3><a href="#">Protección Social y Desarrollo</a></h3>
-      <ul id="respuestaProteccion-Brazil"></ul>
+      <ul id="respuestaproteccion-brazil"></ul>
     </section>
-    <section id="bloqueSalud-Brazil" class="hide">
+    <section id="bloquesalud-brazil" class="hide bloquessectores">
       <h3><a href="#">Salud</a></h3>
-      <ul id="respuestaSalud-Brazil"></ul>
+      <ul id="respuestasalud-brazil"></ul>
     </section>
-    <section id="bloqueGenero-Brazil" class="hide">
+    <section id="bloquegenero-brazil" class="hide bloquessectores">
       <h3><a href="#">Género</a></h3>
-      <ul id="respuestaGenero-Brazil"></ul>
+      <ul id="respuestagenero-brazil"></ul>
     </section>
-    <section id="bloqueSector-Brazil" class="hide">
+    <section id="bloquesector-brazil" class="hide bloquessectores">
       <h3><a href="#">Sector Privado</a></h3>
-      <ul id="respuestaSector-Brazil"></ul>
+      <ul id="respuestasector-brazil"></ul>
     </section>
-    <section id="bloqueEducacion-Brazil" class="hide">
+    <section id="bloqueeducacion-brazil" class="hide bloquessectores">
       <h3><a href="#">Educación</a></h3>
-      <ul id="respuestaEducacion-Brazil"></ul>
+      <ul id="respuestaeducacion-brazil"></ul>
     </section>
-    <section id="bloqueDesarrollo-Brazil" class="hide">
+    <section id="bloquedesarrollo-brazil" class="hide bloquessectores">
       <h3><a href="#">Desarrollo Social</a></h3>
-      <ul id="respuestaDesarrollo-Brazil"></ul>
+      <ul id="respuestadesarrollo-brazil"></ul>
     </section>
-    <section id="bloqueEficacia-Brazil" class="hide">
+    <section id="bloquesectorpublico-brazil" class="hide bloquessectores">
+      <h3><a href="#">Sector Público</a></h3>
+      <ul id="respuestasectorpublico-brazil"></ul>
+    </section>
+    <section id="bloqueeficacia-brazil" class="hide bloquessectores">
       <h3><a href="#">Eficacia de la Ayuda</a></h3>
-      <ul id="respuestaEficacia-Brazil"></ul>
+      <ul id="respuestaeficacia-brazil"></ul>
     </section>
   </main>
-  <footer></footer>
-  <!-- <script src="./data/lol/lol.js"></script> -->
-  <!-- <script src="./data/pokemon/pokemon.js"></script> -->
+  <footer>
+    <p id="developer">Copyright ©-2019 all right reserved. Developed by Andrea Moscoso & Deysi Vergara.</p>
+  </footer>
   <script src="./data/worldbank/worldbank.js"></script>
-  <!-- <script src="./data/worldbank/worldbankmini.js"></script> -->
   <script src="data.js"></script>
   <script src="main.js"></script>
+  
 </body>
-
 </html>
