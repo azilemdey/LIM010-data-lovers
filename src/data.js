@@ -1,15 +1,5 @@
 /* Manejo de data */
-
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-// const example = () => {
-//  return 'example';
-// };
-
-
-// window.example = example;
-
+// 2 //
 const indicatorsPais = (indicatorsPais) => {
   let proteccionSocial = [];
   let salud = [];
@@ -38,6 +28,7 @@ const indicatorsPais = (indicatorsPais) => {
       eficacia.push(indicatorsPais[i].indicatorName);
     }
   }
+  console.log(indicatorsPais[i].indicatorCode.split('_')[0]);
   return {
     proteccionSocial: proteccionSocial,
     salud: salud,
@@ -50,27 +41,42 @@ const indicatorsPais = (indicatorsPais) => {
   };
 };
 
+const listarTodo = (data, pais, indicador) => {
+  let infop = data[pais].indicators;
+  let resultado;
+  for (let i = 0; infop.length > i; i++) {
+    if (infop[i].indicatorCode === indicador) {
+      resultado = infop[i];
+      sesionActualIndicador = infop[i];
+    }
+  }
+  return resultado;
+};
 
-const print = (dataFiltro) => {
-  let tableDataProteccionPeru = document.getElementById('datayear');
-  console.log('Filtro', dataFiltro);
-  console.log(dataFiltro.data);
-  //Let llaves=array de años
-  let llaves = Object.keys(dataFiltro.data);
-  let html = `<tr><td>Año</td><td>Valor</td></tr>`;
+// 3 //
+const ascendente = (sesionActualIndicador) => {
+  let filtro = Object.keys(sesionActualIndicador.data).sort((des, asc) => {
+    if (asc > des) {
+      return -1;
+    }
+  });
+  return filtro;
+};
+
+const descendente = (sesionActualIndicador) => {
+  let filtro = Object.keys(sesionActualIndicador.data).sort((des, asc) => {
+    if (des > asc) {
+      return -1;
+    }
+  });
+  return filtro;
+};
+
+// 4 //
+const promedio = (dataFiltro, llaves) => {
   let promedio = 0;
   let total = llaves.length;
-  let dataAños = '';
   for (let i = 0; llaves.length > i; i++) {
-    console.log(llaves[i], dataFiltro.data[llaves[i]]);
-    dataAños=dataFiltro.data[llaves[i]];
-    if (dataAños===""){
-      dataAños = 0;
-    }else{
-      dataAños = (parseFloat(dataAños)).toFixed(2);
-    }
-    
-    html += `<tr><td>${llaves[i]}</td><td>${dataAños}</td></tr>`;
     let getData = dataFiltro.data[llaves[i]];
     if (getData === '') {
       promedio = promedio + 0;
@@ -78,55 +84,42 @@ const print = (dataFiltro) => {
       let entero = parseInt(getData);
       promedio = promedio + entero;
     }
+    console.log(getData);
   }
   let calculo = parseFloat((promedio / total)).toFixed(2);
-  html += `<tr><td>PROMEDIO</td><td>${calculo}</td></tr>`
-  tableDataProteccionPeru.innerHTML = html;
-};
-const print2 = (dataFiltro) => {
-  let tableDataProteccionPeru = document.getElementById('datayear');
-  console.log('Filtro', dataFiltro);
-  console.log(dataFiltro.data);
-  //Let llaves=array de años
-  let llaves = Object.keys(dataFiltro.data).reverse();
-  let html = `<tr><td>Año</td><td>Valor</td></tr>`;
-  let promedio = 0;
-  let total = llaves.length;
-  let dataAños = '';
-  for (let i = 0; llaves.length > i; i++) {
-    console.log(llaves[i], dataFiltro.data[llaves[i]]);
-    dataAños=dataFiltro.data[llaves[i]];
-    if (dataAños===""){
-      dataAños = 0;
-    }else{
-      dataAños = (parseFloat(dataAños)).toFixed(2);
-    }
-    
-    html += `<tr><td>${llaves[i]}</td><td>${dataAños}</td></tr>`;
-    let getData = dataFiltro.data[llaves[i]];
-    if (getData === '') {
-      promedio = promedio + 0;
-    } else {
-      let entero = parseInt(getData);
-      promedio = promedio + entero;
-    }
-  }
-  let calculo = parseFloat((promedio / total)).toFixed(2);
-  html += `<tr><td>PROMEDIO</td><td>${calculo}</td></tr>`
-  tableDataProteccionPeru.innerHTML = html;
-};
-const printSelector = (dataFiltroYear) => {
-  let tableDataYearProteccionPeru = document.getElementById('filtroyear');
-  let llaves = Object.keys(dataFiltroYear.data);
-  let html = '<option>Año</option>';
-  for (let i = 0; llaves.length > i; i++) {
-    console.log(llaves[i]);
-    html += `<option>${llaves[i]}</option>`;
-  }
-  tableDataYearProteccionPeru.innerHTML = html;
+  return calculo;
 };
 
+// 5 //
+const filtroYear = (sesionActualIndicador, x) => {
+  let valor = sesionActualIndicador.data[x];
+  let copia = Object.assign({}, sesionActualIndicador);
+  let entero = parseInt(x);
+  copia.data = {};
+  copia.data[entero] = valor;
+  return copia;
+};
+
+const filtrodesdeToHasta = (sesionActualIndicador, desde, hasta) => {
+  let copia = Object.assign({}, sesionActualIndicador);
+  let llaves = Object.keys(copia.data);
+  let recopilacion = {};
+  for (let i = 0; llaves.length > i; i++) {
+    let indiceEntero = parseInt(llaves[i]);
+    if (desde <= indiceEntero && hasta >= indiceEntero) {
+      recopilacion[indiceEntero] = copia.data[indiceEntero];
+    }
+  }
+  copia.data = recopilacion;
+  return copia;
+};
 
 window.worldbank = {
-  indicatorsPais: indicatorsPais
+  indicatorsPais: indicatorsPais,
+  listarTodo: listarTodo,
+  promedio: promedio,
+  ascendente: ascendente,
+  descendente: descendente,
+  filtroYear: filtroYear,
+  filtrodesdeToHasta: filtrodesdeToHasta
 };
